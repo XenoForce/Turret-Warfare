@@ -2,3 +2,89 @@
 // model: Uprise
 
 // image: Meltdown
+
+
+type: LaserTurret
+size: 4
+unitSort: strongest
+health: 8660
+reloadTime: 170
+range: 345
+shots : 1
+heatColor: FFFFFFF
+targetAir: true
+targetGround: true
+shootCone: 40
+powerUse: 48
+coolantMultiplier: 1.0
+
+consumes: {}
+
+update: true
+hasPower: true
+shootEffect: shootBigSmoke2
+shootShake: 6
+firingMoveFract: 0.5
+shootDuration: 430
+shootSound: laserbig
+loopSound: beam
+loopSoundVolume: 4.5
+recoilAmount: 4.5
+restitution: 0.04
+rotateSpeed: 2
+
+shootType: {
+      type: ContinuousLaserBulletType
+      damage: 300
+      width: 13
+      oscScl: 2
+      oscMag: 5
+      length: 350
+      status: melting
+      largeHit: true
+      statusDuration: 50
+      
+      hitEffect: {
+        type: ParticleEffect
+        particles: 6
+        length: 50
+        lifetime: 15
+        line: true
+        lenFrom: 12
+        lenTo: 12
+        strokeFrom: 3
+        strokeTo: 0.5
+        colorFrom: ffb98b
+        colorTo: ffb98b50
+      }
+      
+      drawSize: 500
+      incendChance: 10
+      pierce: true
+      incendSpread: 7
+      incendAmount: 4
+      spaceMag: 45
+      fragBullets: 1
+      fragCone: 360
+      
+      fragBullet: {
+        type: ShrapnelBulletType
+        serrations: 1
+        status: melting
+        length: 20
+        width: 20
+        toColor: ffb98b
+        damage: 80
+      }
+}
+
+// coolantUsage: 2.5
+
+category: turret
+
+research: duo
+
+requirements: []
+buildCostMultiplier: 0.1
+
+alwaysUnlocked: true
