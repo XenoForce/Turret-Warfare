@@ -1,0 +1,7 @@
+name: turret-warfare
+displayName: Turret Warfare
+author: XenoTale
+description: A test ground for Turrets.
+version: "1.0.1"
+minGameVersion: "136"
+dependencies: []
