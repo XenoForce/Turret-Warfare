@@ -1,4 +1,310 @@
 
-// model: Dread
+// model: Dread (Voltirium Alloy)
 
 // image: Fuse
+
+
+type: PowerTurret
+health: 8660
+
+hasPower: true
+powerUse: 160
+
+targetAir: true
+targetGround: true
+
+coolantMultiplier: 1.0
+reloadTime: 10
+restitution: 0.1
+unitSort: strongest
+ammoUseEffect: casing3
+ammoEjectBack: 2
+range: 400
+inaccuracy: 3
+recoilAmount: 5
+spread: 24
+alternate: true
+shootShake: 4
+shots: 2
+size: 3
+shootCone: 24
+shootSound: shootBig
+
+
+shootType: {
+    
+    type: BasicBulletType
+    sprite: advancements-gauss-bullet
+    speed: 8
+    damage: 2700
+    height: 42
+    width: 25
+    trailColor: 8894FFFF
+    trailLength: 10
+    trailWidth: 4.5
+    ammoMultiplier: 4
+    frontColor: FFFFFFFF
+    backColor: 8894FFFF
+    
+    shootEffect: {
+        type: multiEffect
+        
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 1
+            length: 0
+            lifetime: 15
+            interp: swingIn
+            region: advancements-spikething
+            offsetX: 8
+            sizeFrom: 25
+            sizeTo: 1
+            colorFrom: 8894FFFF
+            colorTo: 7983E2FF
+        }
+    
+        {
+            type: ParticleEffect
+            line: true
+            particles: 10
+            lifetime: 30
+            offset: 60
+            interp: circleOut
+            length: 120
+            cone: -360
+            strokeTo: 0
+            strokeFrom: 2.5
+            sizeFrom: 20
+            sizeTo: 20
+            lightColor: 8894FFFF
+            colorFrom: 8894FFFF
+            colorTo: 7983E2FF
+        }
+        ]
+    } //shootEffect
+    
+    
+    
+    hitEffect: {
+        type: multiEffect
+        
+        effects: [
+        {
+            "type": "WaveEffect"
+            "lifetime": 25
+            "sizeFrom": 0
+            "sizeTo": 55
+            "strokeFrom": 3
+            "strokeTo": 0
+            "lightColor": "8894FFFF"
+            "colorFrom": "8894FFFF"
+            "colorTo": "7983E2FF"
+        }
+        
+        {
+            "type": "ParticleEffect"
+            "lightOpacity": 0
+            "particles": 25
+            "length": 50
+            "lifetime": 50
+            "interp": "circleOut"
+            "sizeInterp": "pow5In"
+            "sizeFrom": 6
+            "sizeTo": 0
+            "colorFrom": "787878"
+            "colorTo": "787878d8"
+        }
+        
+        {
+            "type": "ParticleEffect"
+            "lightOpacity": 0
+            "particles": 20
+            "length": 40
+            "lifetime": 40
+            "interp": "circleOut"
+            "sizeInterp": "pow5In"
+            "sizeFrom": 4
+            "sizeTo": 0
+            "colorFrom": "787878"
+            "colorTo": "787878d8"
+        }
+        
+        { 
+            "type": "ParticleEffect"
+            "lightOpacity": 0
+            "particles": 20
+            "length": 30
+            "lifetime": 30
+            "interp": "circleOut"
+            "sizeInterp": "pow5In"
+            "sizeFrom": 2.5
+            "sizeTo": 0
+            "colorFrom": "787878"
+            "colorTo": "787878d8"
+        }
+        
+        { 
+            "type": "ParticleEffect"
+            "line": true
+            "particles": 15
+            "lifetime": 30
+            "offset": 60
+            "interp": "circleOut"
+            "length": 100
+            "cone": -360
+            "strokeTo": 0
+            "strokeFrom": 3
+            "sizeFrom": 12
+            "sizeTo": 12
+            "lightColor": "8894FFFF"
+            "colorFrom": "8894FFFF"
+            "colorTo": "7983E2FF"
+        }
+        
+        { 
+            "type": "ParticleEffect"
+            "line": true
+            "particles": 10
+            "lifetime": 30
+            "offset": 60
+            "interp": "circleOut"
+            "length": 120
+            "cone": -40
+            "strokeTo": 0
+            "strokeFrom": 2.5
+            "sizeFrom": 20
+            "sizeTo": 20
+            "lightColor": "8894FFFF"
+            "colorFrom": "8894FFFF"
+            "colorTo": "7983E2FF"
+        }
+        ]
+    } //hitEffect
+    
+    
+    despawnEffect: {
+        type: multiEffect
+    
+        effects: [
+        {
+            "type": "WaveEffect"
+            "lifetime": 25
+            "sizeFrom": 0
+            "sizeTo": 55
+            "strokeFrom": 3
+            "strokeTo": 0
+            "lightColor": "8894FFFF"
+            "colorFrom": "8894FFFF"
+            "colorTo": "7983E2FF"
+        }
+        {
+            "type": "ParticleEffect"
+            "lightOpacity": 0
+            "particles": 25
+            "length": 50
+            "lifetime": 50
+            "interp": "circleOut"
+            "sizeInterp": "pow5In"
+            "sizeFrom": 6
+            "sizeTo": 0
+            "colorFrom": "787878"
+            "colorTo": "787878d8"
+        }
+        {
+            "type": "ParticleEffect"
+            "lightOpacity": 0
+            "particles": 20
+            "length": 40
+            "lifetime": 40
+            "interp": "circleOut"
+            "sizeInterp": "pow5In"
+            "sizeFrom": 4
+            "sizeTo": 0
+            "colorFrom": "787878"
+            "colorTo": "787878d8"
+        }
+        { 
+            "type": "ParticleEffect"
+            "lightOpacity": 0
+            "particles": 20
+            "length": 30
+            "lifetime": 30
+            "interp": "circleOut"
+            "sizeInterp": "pow5In"
+            "sizeFrom": 2.5
+            "sizeTo": 0
+            "colorFrom": "787878"
+            "colorTo": "787878d8"
+        }
+        { 
+            "type": "ParticleEffect"
+            "line": true
+            "particles": 15
+            "lifetime": 30
+            "offset": 60
+            "interp": "circleOut"
+            "length": 100
+            "cone": -360
+            "strokeTo": 0
+            "strokeFrom": 3
+            "sizeFrom": 12
+            "sizeTo": 12
+            "lightColor": "8894FFFF"
+            "colorFrom": "8894FFFF"
+            "colorTo": "7983E2FF"
+        }
+        { 
+            "type": "ParticleEffect"
+            "line": true
+            "particles": 10
+            "lifetime": 30
+            "offset": 60
+            "interp": "circleOut"
+            "length": 120
+            "cone": -40
+            "strokeTo": 0
+            "strokeFrom": 2.5
+            "sizeFrom": 20
+            "sizeTo": 20
+            "lightColor": "8894FFFF"
+            "colorFrom": "8894FFFF"
+            "colorTo": "7983E2FF"
+        }
+        ]
+    } //despawnEffect
+    
+    
+    lifetime: 55
+    fragBullets: 10
+    fragVelocityMin: 4
+    fragCone: 360
+    fragLifeMin: 0.3
+    
+    fragBullet: {
+        type: BasicBulletType
+        status: melting
+        height : 12
+        width : 12
+        lifetime: 20
+        damage : 100
+        frontColor: FFFFFFFF
+        backColor: 8894FFFF
+        pierce: true
+        pierceBuilding: true
+        splashDamage : 100
+        splashDamageRadius: 15
+        hitEffect: flakExplosion
+    } //fragBullet
+    
+} //shootType
+
+
+category: turret
+
+research: duo
+
+requirements: []
+buildCostMultiplier: 0.1
+
+alwaysUnlocked: true
