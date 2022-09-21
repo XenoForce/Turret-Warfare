@@ -1,8 +1,9 @@
+name: Hydra
+description: Hydra turret
 
 // model: Retaliator
 
 // image: Swarmer
-
 
 type: PowerTurret
 reloadTime: 71

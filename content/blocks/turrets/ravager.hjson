@@ -1,8 +1,9 @@
+name: Ravager
+description: Ravager turret
 
 // model: Vision
 
 // image: Ripple
-
 
 type: PowerTurret
 size: 3
@@ -240,7 +241,7 @@ hitEffect: {
 
 category: turret
 
-research: duo
+research: thor
 
 requirements: []
 buildCostMultiplier: 0.1

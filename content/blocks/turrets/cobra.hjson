@@ -1,8 +1,9 @@
+name: Cobra
+description: Cobra turret
 
 // model: Uprise
 
 // image: Meltdown
-
 
 type: LaserTurret
 size: 4
@@ -82,7 +83,7 @@ shootType: {
 
 category: turret
 
-research: duo
+research: ravager
 
 requirements: []
 buildCostMultiplier: 0.1

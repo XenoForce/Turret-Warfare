@@ -1,8 +1,9 @@
+name: Thor
+description: Thor turret
 
 // model: Dread (Voltirium Alloy)
 
 // image: Fuse
-
 
 type: PowerTurret
 health: 8660
@@ -302,7 +303,7 @@ shootType: {
 
 category: turret
 
-research: duo
+research: hydra
 
 requirements: []
 buildCostMultiplier: 0.1

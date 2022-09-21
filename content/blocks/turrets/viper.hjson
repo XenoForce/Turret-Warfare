@@ -1,8 +1,9 @@
+name: Viper
+description: Viper turret
 
 // model: Fear (Surge-Alloy)
 
 // image: Spectre
-
 
 type: PowerTurret
 size: 4
@@ -172,7 +173,7 @@ consumes: {}
 
 category: turret
 
-research: duo
+research: cobra
 
 requirements: []
 buildCostMultiplier: 0.1
