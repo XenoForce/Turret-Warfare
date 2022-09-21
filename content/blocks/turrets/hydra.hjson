@@ -13,7 +13,7 @@ shootCone: 30
 inaccuracy: 10
 recoilAmount: 4
 size: 2
-health: 8660
+health: 99000
 shootShake: 4
 velocityInaccuracy: 0.3
 shots: 7

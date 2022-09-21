@@ -6,7 +6,7 @@ description: Thor turret
 // image: Fuse
 
 type: PowerTurret
-health: 8660
+health: 99000
 
 hasPower: true
 powerUse: 160
@@ -35,7 +35,7 @@ shootSound: shootBig
 shootType: {
     
     type: BasicBulletType
-    sprite: advancements-gauss-bullet
+    sprite: turret-warfare-tie-bullet
     speed: 8
     damage: 2700
     height: 42
@@ -57,7 +57,7 @@ shootType: {
             length: 0
             lifetime: 15
             interp: swingIn
-            region: advancements-spikething
+            region: turret-warfare-arrow
             offsetX: 8
             sizeFrom: 25
             sizeTo: 1

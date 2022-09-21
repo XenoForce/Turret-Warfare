@@ -7,7 +7,7 @@ description: Viper turret
 
 type: PowerTurret
 size: 4
-health: 8660
+health: 99000
 maxAmmo: 20
 ammoPerShot: 20
 reloadTime: 500
@@ -39,7 +39,7 @@ shootType: {
 	type: pointBulletType
 	damage: 6000
 	shootEffect: instShoot
-	status: advancements-surge-charge
+	status: turret-warfare-s-discharge
 	statusDuration: 100
 	lightning: 8
 	lightningLength: 17
@@ -122,7 +122,7 @@ shootType: {
             "length": 0,
             "interp": "swingIn",
             "lifetime": 25,
-            "region": "advancements-star",
+            "region": "turret-warfare-spike",
             "lightColor": "F3E979FF",
             "colorFrom": "F3E979FF",
             "colorTo": "F3E979FF"
@@ -135,7 +135,7 @@ shootType: {
             "length": 0,
             "interp": "swingIn",
             "lifetime": 25,
-            "region": "advancements-star",
+            "region": "turret-warfare-spike",
             "lightColor": "F3E979FF",
             "colorFrom": "FFFFFFF",
             "colorTo": "FFFFFFF"
@@ -156,7 +156,7 @@ shootType: {
         length: 0
         lifetime: 35
         sizeFrom: 45
-        region: advancements-wide
+        region: turret-warfare-bow
         colorFrom: F3E979FF
         colorTo: D99F6BFF
 	}

@@ -8,7 +8,7 @@ description: Cobra turret
 type: LaserTurret
 size: 4
 unitSort: strongest
-health: 8660
+health: 99000
 reloadTime: 170
 range: 345
 shots : 1

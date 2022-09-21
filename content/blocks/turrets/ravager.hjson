@@ -7,7 +7,7 @@ description: Ravager turret
 
 type: PowerTurret
 size: 3
-health: 8660
+health: 99000
 range: 500
 reloadTime: 230
 inaccuracy: 2
@@ -28,7 +28,7 @@ shootType: {
     sprite: circle-bullet
     lightRadius: 80
     lightColor: BF92F9FF
-    // status: advancements-sap-inferno
+    status: turret-warfare-s-fire
     statusDuration: 100
     speed: 6
     hitSound: plasmaboom
