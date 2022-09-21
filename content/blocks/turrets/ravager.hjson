@@ -69,116 +69,116 @@ hitEffect: {
     }
     
     {
-    "type": "ParticleEffect",
-    "particles": 10,
-    "offset": 100,
-    "sizeFrom": 1,
-    "sizeTo": 3,
-    "length": 150,
-    "baseLength": -150,
-    "interp": "pow3In",
-    "sizeInterp": "pow5Out",
-    "lifetime": 50,
-    "colorFrom": "BF92F900",
-    "colorTo": "BF92F9FF"
+      "type": "ParticleEffect",
+      "particles": 10,
+      "offset": 100,
+      "sizeFrom": 1,
+      "sizeTo": 3,
+      "length": 150,
+      "baseLength": -150,
+      "interp": "pow3In",
+      "sizeInterp": "pow5Out",
+      "lifetime": 50,
+      "colorFrom": "BF92F900",
+      "colorTo": "BF92F9FF"
     }
     
     {
-    "type": "ParticleEffect",
-    "particles": 10,
-    "offset": 100,
-    "sizeFrom": 1,
-    "sizeTo": 3,
-    "length": 200,
-    "baseLength": -200,
-    "interp": "pow3In",
-    "sizeInterp": "pow5Out",
-    "lifetime": 60,
-    "colorFrom": "BF92F900",
-    "colorTo": "BF92F9FF"
+      "type": "ParticleEffect",
+      "particles": 10,
+      "offset": 100,
+      "sizeFrom": 1,
+      "sizeTo": 3,
+      "length": 200,
+      "baseLength": -200,
+      "interp": "pow3In",
+      "sizeInterp": "pow5Out",
+      "lifetime": 60,
+      "colorFrom": "BF92F900",
+      "colorTo": "BF92F9FF"
     }
     
     {
-    "type": "ParticleEffect",
-    "particles": 10,
-    "offset": 100,
-    "sizeFrom": 1,
-    "sizeTo": 3,
-    "length": 250,
-    "baseLength": -250,
-    "interp": "pow3In",
-    "sizeInterp": "pow5Out",
-    "lifetime": 70,
-    "colorFrom": "BF92F900",
-    "colorTo": "BF92F9FF"
+      "type": "ParticleEffect",
+      "particles": 10,
+      "offset": 100,
+      "sizeFrom": 1,
+      "sizeTo": 3,
+      "length": 250,
+      "baseLength": -250,
+      "interp": "pow3In",
+      "sizeInterp": "pow5Out",
+      "lifetime": 70,
+      "colorFrom": "BF92F900",
+      "colorTo": "BF92F9FF"
     }
     
     {
-    "type": "ParticleEffect",
-    "particles": 10,
-    "offset": 100,
-    "sizeFrom": 1,
-    "sizeTo": 3,
-    "length": 300,
-    "baseLength": -300,
-    "interp": "pow3In",
-    "sizeInterp": "pow5Out",
-    "lifetime": 80,
-    "colorFrom": "BF92F900",
-    "colorTo": "BF92F9FF"
+      "type": "ParticleEffect",
+      "particles": 10,
+      "offset": 100,
+      "sizeFrom": 1,
+      "sizeTo": 3,
+      "length": 300,
+      "baseLength": -300,
+      "interp": "pow3In",
+      "sizeInterp": "pow5Out",
+      "lifetime": 80,
+      "colorFrom": "BF92F900",
+      "colorTo": "BF92F9FF"
     }
     
     {
-    "type": "ParticleEffect",
-    "particles": 45,
-    "offset": 100,
-    "sizeFrom": 1,
-    "sizeTo": 3,
-    "length": 350,
-    "baseLength": -350,
-    "interp": "pow3In",
-    "sizeInterp": "pow5Out",
-    "lifetime": 90,
-    "colorFrom": "BF92F900",
-    "colorTo": "BF92F9FF"
+      "type": "ParticleEffect",
+      "particles": 45,
+      "offset": 100,
+      "sizeFrom": 1,
+      "sizeTo": 3,
+      "length": 350,
+      "baseLength": -350,
+      "interp": "pow3In",
+      "sizeInterp": "pow5Out",
+      "lifetime": 90,
+      "colorFrom": "BF92F900",
+      "colorTo": "BF92F9FF"
     }
     
     {
-    "type": "ParticleEffect",
-    "particles": 1,
-    "sizeFrom": 30,
-    "sizeTo": 0,
-    "length": 0,
-    "interp": "swingIn",
-    "lifetime": 90,
-    "layer": 109,
-    "colorFrom": "BF92F990",
-    "colorTo": "BF92F990"
+      "type": "ParticleEffect",
+      "particles": 1,
+      "sizeFrom": 30,
+      "sizeTo": 0,
+      "length": 0,
+      "interp": "swingIn",
+      "lifetime": 90,
+      "layer": 109,
+      "colorFrom": "BF92F990",
+      "colorTo": "BF92F990"
     }
     
     {
-    "type": "ParticleEffect",
-    "particles": 1,
-    "sizeFrom": 20,
-    "sizeTo": 0,
-    "length": 0,
-    "interp": "swingIn",
-    "lifetime": 90,
-    "layer": 109,
-    "colorFrom": "BF92F9FF",
-    "colorTo": "BF92F9FF"
+      "type": "ParticleEffect",
+      "particles": 1,
+      "sizeFrom": 20,
+      "sizeTo": 0,
+      "length": 0,
+      "interp": "swingIn",
+      "lifetime": 90,
+      "layer": 109,
+      "colorFrom": "BF92F9FF",
+      "colorTo": "BF92F9FF"
     }
     
     {
-    "type": "ParticleEffect",
-    "particles": 1,
-    "sizeFrom": 12,
-    "sizeTo": 0,
-    "interp": "swingIn",
-    "length": 0,
-    "lifetime": 90,
-    "colorFrom": "000000FF",
-    "colorTo": "000000FF" 
+      "type": "ParticleEffect",
+      "particles": 1,
+      "sizeFrom": 12,
+      "sizeTo": 0,
+      "interp": "swingIn",
+      "length": 0,
+      "lifetime": 90,
+      "colorFrom": "000000FF",
+      "colorTo": "000000FF" 
     }
     ]
     
@@ -187,6 +187,7 @@ hitEffect: {
     "despawnEffect": "none",
     "lightning": 1,
     "lightningLength": 2,
+    
     "lightningType": {
     "type": "BulletType",
     "collides": false,
@@ -197,40 +198,42 @@ hitEffect: {
     "hitEffect": "none",
     "fragBullets": 110,
     "fragLifeMin": 0.01,
+    
     "fragBullet": {
-    "type": "BulletType",
-    "speed": 0,
-    "damage": 0,
-    "lifetime": 80,
-    "collides": false,
-    "absorbable": false,
-    "hittable": false,
-    "lightning": 1,
-    "lightningDamage": 100,
-    "lightningLength": 9,
-    "lightningLengthRand": 17,
-    "lightningColor": "BF92F9FF",
-    "splashDamage": 50, 
-    "splashDamageRadius": 80,
-    "knockback": -5,
-    "lightRadius": 0,
-    "hitEffect": "none",
-    "keepVelocity": false,
-    "despawnEffect": "none",
-    "fragBullets": 25,
-    "fragBullet": {
-    "type": "SapBulletType",
-    "damage": 0,
-    "knockback": -5,
-    "lifetime": 0,
-    "pierce": true,
-    "length": 140,
-    "width": 0,
-    "lightColor": "00000000",
-    "hitEffect": "none",
-    "status": "none",
-    "statusDuration": 100
-    }
+      "type": "BulletType",
+      "speed": 0,
+      "damage": 0,
+      "lifetime": 80,
+      "collides": false,
+      "absorbable": false,
+      "hittable": false,
+      "lightning": 1,
+      "lightningDamage": 100,
+      "lightningLength": 9,
+      "lightningLengthRand": 17,
+      "lightningColor": "BF92F9FF",
+      "splashDamage": 50, 
+      "splashDamageRadius": 80,
+      "knockback": -5,
+      "lightRadius": 0,
+      "hitEffect": "none",
+      "keepVelocity": false,
+      "despawnEffect": "none",
+      "fragBullets": 25,
+      
+      "fragBullet": {
+        "type": "SapBulletType",
+        "damage": 0,
+        "knockback": -5,
+        "lifetime": 0,
+        "pierce": true,
+        "length": 140,
+        "width": 0,
+        "lightColor": "00000000",
+        "hitEffect": "none",
+        "status": "none",
+        "statusDuration": 100
+      }
     }
     }
 }
