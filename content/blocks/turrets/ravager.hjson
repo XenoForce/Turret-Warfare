@@ -21,7 +21,7 @@ recoilAmount: 6
 restitution: 0.08
 rotateSpeed: 1.0
 shootShake: 10
-shootSound: bigLaserShoot
+shootSound: railgun
 
 shootType: {
     type: BasicBulletType
