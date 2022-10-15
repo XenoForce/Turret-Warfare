@@ -1,0 +1,80 @@
+name: "Breach BBB"
+type: PowerTurret
+
+size: 3
+shootSound: shootAlt
+
+shootType: {
+    type: BasicBulletType
+    
+    shootEffect: {
+        type: MultiEffect
+        effects: [
+            shootBigColor
+            colorSparkBig
+        ]
+    }
+    
+    speed: 7.5
+    damage: 85
+    lifetime: 27    // = (turret Range + 9) / bullet speed = (190 + 9) / 7.5 = 26.53
+    width: 12
+    hitSize: 7
+    height: 20
+    smokeEffect: shootBigSmoke
+    ammoMultiplier: 1
+    pierceCap: 2
+    pierce: true
+    pierceBuilding: true
+    hitColor: b1dd7e    //berylShot
+    backColor: b1dd7e    //berylShot
+    trailColor: b1dd7e    //berylShot
+    frontColor: ffffff    //white
+    trailWidth: 2.1
+    trailLength: 10
+    hitEffect: hitBulletColor
+    despawnEffect: hitBulletColor
+    buildingDamageMultiplier: 0.3
+}
+
+// coolantMultiplier: 6
+
+
+drawer: {                        //Comment the whole drawer out, to get a square turret base.
+    type: DrawTurret
+    basePrefix: "reinforced-"    //Comment this line out, to get a square turret base.
+}
+
+
+shake: 1
+shootY: -2
+outlineColor: 2d2f39    //darkOutline
+
+envEnabled: 17
+envDisabled: 0
+
+reload: 40
+recoil: 2
+range: 190
+shootCone: 3
+scaledHealth: 180
+rotateSpeed: 1.5
+
+researchCostMultiplier: 0.05
+
+/*
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 0.25
+    }
+}
+*/
+
+requirements: []
+buildCostMultiplier: 0.1
+
+category: turret
+research: duo
+
+alwaysUnlocked: true
