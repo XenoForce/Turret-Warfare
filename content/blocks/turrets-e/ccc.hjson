@@ -1,0 +1,98 @@
+name: "Sublimate CCC"
+type: ContinuousTurret
+
+size: 3
+
+drawer: {
+    type: DrawTurret
+    basePrefix: "reinforced-"
+    // heatColor: fa2859
+    
+    parts: [
+    {
+        type: RegionPart
+        suffix: "-back"
+        progress: {
+            type: warmup
+        }
+        mirror: true
+        moveRot: 40
+        x: 5.5              // = 22 / 4
+        y: -0.25            // = -1 / 4
+        moveY: 1.5          // = 6 / 4
+        under: true
+        heatColor: fa2859
+    }
+    {
+        type: RegionPart
+        suffix: "-front"
+        progress: {
+            type: warmup
+        }
+        mirror: true
+        moveRot: 40
+        x: 5           // = 20 / 4
+        y: 4.25        // = 17 / 4
+        moveX: 1
+        moveY: 1
+        under: true
+        heatColor: fa2859
+    }
+    {
+        type: RegionPart
+        suffix: "-nozzle"
+        progress: {
+            type: warmup
+        }
+        mirror: true
+        moveX: 2        // = 8 / 4
+        heatColor: f03b0e
+    }]
+}
+
+outlineColor: 2d2f39    //darkOutline
+targetInterval: 5
+loopSound: torch
+shootSound: none
+loopSoundVolume: 1
+
+hasItems: false
+hasLiquids: true
+hasPower: true
+consumesPower: false
+outputsPower: false
+
+shootType: {
+    type: ContinuousFlameBulletType
+    damage: 130
+    rangeChange: 70
+    length: 200        // = 130 + rangeChange
+    knockback: 2
+    pierceCap: 3
+    buildingDamageMultiplier: 0.3
+    
+    /*
+    Java code:
+    colors = new Color[] {Color.valueOf("465ab8").a(0.55f),
+                          Color.valueOf("66a6d2").a(0.7f),
+                          Color.valueOf("89e8b6").a(0.8f),
+                          Color.valueOf("cafcbe"),
+                          Color.white };
+    */
+    
+    colors: [ 465ab88c, 66a6d2b2, 89e8b6cc, cafcbe, ffffff ]
+    flareColor: 89e8b6
+    lightColor: 89e8b6
+    hitColor: 89e8b6
+}
+
+scaledHealth: 210
+shootY: 7
+
+requirements: []
+buildCostMultiplier: 0.1
+
+category: turret
+research: duo
+
+alwaysUnlocked: true
