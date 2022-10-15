@@ -9,14 +9,19 @@ type: LaserTurret
 size: 4
 unitSort: strongest
 health: 99000
-reloadTime: 170
+reload: 170
 range: 345
-shots : 1
+
+shoot: {
+  type: ShootSpread
+  shots: 1
+  spread: 0
+}
+
 heatColor: FFFFFFF
 targetAir: true
 targetGround: true
 shootCone: 40
-powerUse: 48
 coolantMultiplier: 1.0
 
 consumes: {}
@@ -24,14 +29,13 @@ consumes: {}
 update: true
 hasPower: true
 shootEffect: shootBigSmoke2
-shootShake: 6
+shake: 6
 firingMoveFract: 0.5
 shootDuration: 430
 shootSound: laserbig
 loopSound: beam
 loopSoundVolume: 4.5
-recoilAmount: 4.5
-restitution: 0.04
+recoil: 4.5
 rotateSpeed: 2
 
 shootType: {
@@ -64,9 +68,7 @@ shootType: {
       pierce: true
       incendSpread: 7
       incendAmount: 4
-      spaceMag: 45
       fragBullets: 1
-      fragCone: 360
       
       fragBullet: {
         type: ShrapnelBulletType

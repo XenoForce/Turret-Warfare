@@ -9,24 +9,28 @@ type: PowerTurret
 health: 99000
 
 hasPower: true
-powerUse: 160
 
 targetAir: true
 targetGround: true
 
 coolantMultiplier: 1.0
-reloadTime: 10
-restitution: 0.1
+reload: 15
 unitSort: strongest
 ammoUseEffect: casing3
 ammoEjectBack: 2
 range: 400
 inaccuracy: 3
-recoilAmount: 5
-spread: 24
-alternate: true
-shootShake: 4
-shots: 2
+recoil: 5
+
+shoot: {
+  type: ShootAlternate
+  shots: 2
+  spread: 24
+  barrels: 2
+  barrelOffset: 1
+}
+
+shake: 4
 size: 3
 shootCone: 24
 shootSound: shootBig
@@ -279,7 +283,6 @@ shootType: {
     lifetime: 55
     fragBullets: 10
     fragVelocityMin: 4
-    fragCone: 360
     fragLifeMin: 0.3
     
     fragBullet: {

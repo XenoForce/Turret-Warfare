@@ -10,32 +10,27 @@ size: 4
 health: 99000
 maxAmmo: 20
 ammoPerShot: 20
-reloadTime: 500
+reload: 100
 range: 1000
-shootLength: 8
 
+// shootLength: 8
 // coolantUsage: 3
 
 ammoUseEffect: casing3Double
 coolantMultiplier: 1.0
 
 hasPower: true
-powerUse: 160
 
 targetAir: true
 targetGround: true
 
-recoilAmount: 6
-shootShake: 6
+recoil: 6
+shake: 6
 inaccuracy: 0
-restitution: 0.009
-cooldown: 0.009
 rotateSpeed: 1
 shootSound: railgun
 
-
 shootType: {
-    
 	type: pointBulletType
 	damage: 6000
 	shootEffect: instShoot
@@ -44,7 +39,6 @@ shootType: {
 	lightning: 8
 	lightningLength: 17
 	lightningDamage: 250
-	
 	
 	hitEffect: {
         type: multiEffect
@@ -146,8 +140,8 @@ shootType: {
 	speed: 1000
 	hitShake: 7
 	trailSpacing: 30
-	colorFrom: F3E979FF
-    colorTo: D99F6BFF
+	// colorFrom: F3E979FF
+    // colorTo: D99F6BFF
 	hitColor: F3E979FF
 	
 	trailEffect: {

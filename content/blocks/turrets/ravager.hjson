@@ -9,18 +9,22 @@ type: PowerTurret
 size: 3
 health: 99000
 range: 500
-reloadTime: 230
+reload: 60
 inaccuracy: 2
-shots: 1
+
+shoot: {
+  type: ShootSpread
+  shots: 1
+  spread: 0
+}
+
 hasPower: true
-powerUse: 160
 
 targetAir: true
 targetGround: true
-recoilAmount: 6
-restitution: 0.08
+recoil: 6
 rotateSpeed: 1.0
-shootShake: 10
+shake: 10
 shootSound: railgun
 
 shootType: {
@@ -36,7 +40,6 @@ shootType: {
     damage: 500
     shrinkX: 0
     shrinkY: 0
-    scaleVelocity: true
     splashDamage: 2750
     splashDamageRadius: 80
     height: 25
