@@ -101,17 +101,15 @@ shootType: {
                 } //fragBullet
             } //bullet
         }] //weapon
-                    
-                    
+        
+        
         abilities: [
         {
             type: MoveEffectAbility
             effect: missileTrailSmoke
             rotation: 180
             y: -9
-            
-            color = Color.grays(0.6f).lerp( Pal.redLight, 0.5 ).a( 0.4 );
-            
+            color: 80808066      // color = Color.grays( 0.6 ).lerp( Pal.redLight, 0.5 ).a( 0.4 );
             interval: 7
         }]
     } //spawnUnit
@@ -127,13 +125,13 @@ drawer: {
     
     parts: [
     {
-        new RegionPart
+        type: RegionPart
         suffix: "-blade"
         progress: {
-            warmup
+            type: warmup
         }
         heatProgress: {
-            warmup
+            type: warmup
         }
         heatColor: ff0000      //red
         moveRot: -22
@@ -146,10 +144,10 @@ drawer: {
             type: RegionPart
             suffix: "-side"
             progress: {
-                = PartProgress.warmup.delay( 0.6 )
+                type: warmup        // = PartProgress.warmup.delay( 0.6 )
             }
             heatProgress: {
-                recoil
+                type: recoil
             }
             heatColor: ff0000      //red
             mirror: true
@@ -171,11 +169,11 @@ drawer: {
         type: RegionPart
         suffix: "-mid"
         progress: {
-            recoil
+            type: recoil
         }
-        
-        heatProgress = PartProgress.warmup.add( -0.2 ).add( p -> Mathf.sin( 9, 0.2 ) * p.warmup );
-        
+        heatProgress: {
+            type: warmup        //= PartProgress.warmup.add( -0.2 ).add( p -> Mathf.sin( 9, 0.2 ) * p.warmup );
+        }
         mirror: false
         under: true
         moveY: -5
@@ -183,9 +181,9 @@ drawer: {
     {
         type: RegionPart
         suffix: "-missile"
-        
-        progress = PartProgress.reload.curve( Interp.pow2In );
-        
+        progress: {
+            type: reload         // = PartProgress.reload.curve( Interp.pow2In );
+        }
         colorTo: 1f1f1f0f
         color: ffffff           //white
         mixColorTo: ffd37f      //accent
@@ -197,9 +195,7 @@ drawer: {
         moves: [
         {
             type: PartMove
-            
-            progress: PartProgress.warmup.inv()
-            
+            progress: warmup        // PartProgress.warmup.inv()
             x: 0
             y: -4
             rot: 0
@@ -238,9 +234,6 @@ consumes: {
     }
 }
 */
-
-
-limitRange();
 
 
 requirements: []
