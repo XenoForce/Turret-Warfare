@@ -1,6 +1,9 @@
 type: missile
 name: "Scathe Missle DDD"
 
+flying: true
+playerControllable: false
+
 controller: MissileAI
 
 // type: MissileUnitType
