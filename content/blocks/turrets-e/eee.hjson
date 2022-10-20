@@ -1,0 +1,329 @@
+name: "Smite EEE"
+type: PowerTurret
+
+size: 2
+
+shootType: {
+    type: BasicBulletType
+    speed: 7
+    damage: 250
+    sprite: large-orb
+    width: 17
+    height: 21
+    hitSize: 8
+    
+    shootEffect: {
+        type: MultiEffect
+        effects: [
+            shootTitan
+            colorSparkBig
+            {
+                type: WaveEffect
+                colorFrom: ffd37f       //accent
+                colorTo: ffd37f         //accent
+                lifetime: 12
+                sizeTo: 20
+                strokeFrom: 3
+                strokeTo: 0.3
+            }
+        ]
+    }
+    
+    smokeEffect: shootSmokeSmite
+    ammoMultiplier: 1
+    pierceCap: 4
+    pierce: true
+    pierceBuilding: true
+    
+    hitColor: ffd37f          //accent
+    backColor: ffd37f         //accent
+    trailColor: ffd37f        //accent
+    frontColor: ffffff        //white
+    trailWidth: 2.8
+    trailLength: 9
+    hitEffect: hitBulletColor
+    buildingDamageMultiplier: 0.3
+    
+    despawnEffect: {
+        type: MultiEffect
+        effects: [
+            hitBulletColor
+            {
+                type: WaveEffect
+                sizeTo: 30
+                colorFrom: ffd37f          //accent
+                colorTo: ffd37f          //accent
+                lifetime: 12
+            }
+        ]
+    }
+    
+    trailRotation: true
+    trailEffect: disperseTrail
+    trailInterval: 3
+    
+    intervalBullet: {
+        type: LightningBulletType
+        damage: 30
+        collidesAir: false
+        ammoMultiplier: 1
+        lightningColor: ffd37f          //accent
+        lightningLength: 5
+        lightningLengthRand: 10
+        buildingDamageMultiplier: 0.25
+        
+        lightningType: {
+            type: BulletType
+            speed: 0.0001
+            damage: 0                    //for visual effect only.
+            lifetime: 10
+            hitEffect: hitLancer
+            despawnEffect: none
+            status: shocked
+            statusDuration: 10
+            hittable: false
+            lightColor: ffffff        //white
+            buildingDamageMultiplier: 0.25
+        }
+    }
+    bulletInterval: 3
+    lifetime: 44.1        // = (realRange + margin) / bullet.speed = (300 + 9) / 7    //limitRange
+}
+
+
+shoot: {
+    type: ShootMulti
+    source: {
+        type: ShootAlternate
+        spread: 6.27
+        shots: 5
+        barrels: 5
+    }
+    dest: [
+        {
+            type: ShootHelix
+            scl: 4
+            mag: 3
+        }
+    ]
+}
+
+
+shootSound: shootSmite
+minWarmup: 0.09
+coolantMultiplier: 6
+shake: 2
+ammoPerShot: 2
+
+
+// var haloProgress = PartProgress.warmup.delay(0.5f);
+// float haloY = -15f, haloRotSpeed = 1f;
+
+
+/*
+            drawer = new DrawTurret("reinforced-"){{
+                parts.addAll(
+
+                new RegionPart("-mid"){{
+                    heatProgress = PartProgress.heat.blend(PartProgress.warmup, 0.5f);
+                    mirror = false;
+                }},
+                new RegionPart("-blade"){{
+                    progress = PartProgress.warmup;
+                    heatProgress = PartProgress.warmup;
+                    mirror = true;
+                    moveX = 5.5f;
+                    moves.add(new PartMove(PartProgress.recoil, 0f, -3f, 0f));
+                }},
+                new RegionPart("-front"){{
+                    progress = PartProgress.warmup;
+                    heatProgress = PartProgress.recoil;
+                    mirror = true;
+                    under = true;
+                    moveY = 4f;
+                    moveX = 6.5f;
+                    moves.add(new PartMove(PartProgress.recoil, 0f, -5.5f, 0f));
+                }},
+                new RegionPart("-back"){{
+                    progress = PartProgress.warmup;
+                    heatProgress = PartProgress.warmup;
+                    mirror = true;
+                    under = true;
+                    moveX = 5.5f;
+                }},
+                new ShapePart(){{
+                    progress = PartProgress.warmup.delay(0.2f);
+                    color = Pal.accent;
+                    circle = true;
+                    hollow = true;
+                    stroke = 0f;
+                    strokeTo = 2f;
+                    radius = 10f;
+                    layer = Layer.effect;
+                    y = haloY;
+                    rotateSpeed = haloRotSpeed;
+                }},
+                new ShapePart(){{
+                    progress = PartProgress.warmup.delay(0.2f);
+                    color = Pal.accent;
+                    circle = true;
+                    hollow = true;
+                    stroke = 0f;
+                    strokeTo = 1.6f;
+                    radius = 4f;
+                    layer = Layer.effect;
+                    y = haloY;
+                    rotateSpeed = haloRotSpeed;
+                }},
+                new HaloPart(){{
+                    progress = haloProgress;
+                    color = Pal.accent;
+                    layer = Layer.effect;
+                    y = haloY;
+
+                    haloRotation = 90f;
+                    shapes = 2;
+                    triLength = 0f;
+                    triLengthTo = 20f;
+                    haloRadius = 16f;
+                    tri = true;
+                    radius = 4f;
+                }},
+                new HaloPart(){{
+                    progress = haloProgress;
+                    color = Pal.accent;
+                    layer = Layer.effect;
+                    y = haloY;
+
+                    haloRotation = 90f;
+                    shapes = 2;
+                    triLength = 0f;
+                    triLengthTo = 5f;
+                    haloRadius = 16f;
+                    tri = true;
+                    radius = 4f;
+                    shapeRotation = 180f;
+                }},
+                new HaloPart(){{
+                    progress = haloProgress;
+                    color = Pal.accent;
+                    layer = Layer.effect;
+                    y = haloY;
+                    haloRotateSpeed = -haloRotSpeed;
+
+                    shapes = 4;
+                    triLength = 0f;
+                    triLengthTo = 5f;
+                    haloRotation = 45f;
+                    haloRadius = 16f;
+                    tri = true;
+                    radius = 8f;
+                }},
+                new HaloPart(){{
+                    progress = haloProgress;
+                    color = Pal.accent;
+                    layer = Layer.effect;
+                    y = haloY;
+                    haloRotateSpeed = -haloRotSpeed;
+
+                    shapes = 4;
+                    shapeRotation = 180f;
+                    triLength = 0f;
+                    triLengthTo = 2f;
+                    haloRotation = 45f;
+                    haloRadius = 16f;
+                    tri = true;
+                    radius = 8f;
+                }},
+                new HaloPart(){{
+                    progress = haloProgress;
+                    color = Pal.accent;
+                    layer = Layer.effect;
+                    y = haloY;
+                    haloRotateSpeed = haloRotSpeed;
+
+                    shapes = 4;
+                    triLength = 0f;
+                    triLengthTo = 3f;
+                    haloRotation = 45f;
+                    haloRadius = 10f;
+                    tri = true;
+                    radius = 6f;
+                }}
+                );
+
+                for(int i = 0; i < 3; i++){
+                    int fi = i;
+                    parts.add(new RegionPart("-blade-bar"){{
+                        progress = PartProgress.warmup;
+                        heatProgress = PartProgress.warmup;
+                        mirror = true;
+                        under = true;
+                        outline = false;
+                        layerOffset = -0.3f;
+                        turretHeatLayer = Layer.turret - 0.2f;
+                        y = 44f / 4f - fi * 38f / 4f;
+                        moveX = 2f;
+
+                        color = Pal.accent;
+                    }});
+                }
+
+                for(int i = 0; i < 4; i++){
+                    int fi = i;
+                    parts.add(new RegionPart("-spine"){{
+                        progress = PartProgress.warmup.delay(fi / 5f);
+                        heatProgress = PartProgress.warmup;
+                        mirror = true;
+                        under = true;
+                        layerOffset = -0.3f;
+                        turretHeatLayer = Layer.turret - 0.2f;
+                        moveY = -22f / 4f - fi * 3f;
+                        moveX = 52f / 4f - fi * 1f + 2f;
+                        moveRot = -fi * 30f;
+
+                        color = Pal.accent;
+                        moves.add(new PartMove(PartProgress.recoil.delay(fi / 5f), 0f, 0f, 35f));
+                    }});
+                }
+            }};
+*/
+
+
+shootWarmupSpeed: 0.04
+shootY: 15
+outlineColor: 2d2f39        //darkOutline
+
+envEnabled: 17
+envDisabled: 0
+
+warmupMaintainTime: 30
+reload: 100
+recoil: 2
+range: 300
+shootCone: 30
+scaledHealth: 350
+rotateSpeed: 1.5
+
+
+/*
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 0.25
+    }
+}
+*/
+
+
+loopSound: glow
+loopSoundVolume: 0.8
+
+
+requirements: []
+buildCostMultiplier: 0.1
+
+category: turret
+research: duo
+
+alwaysUnlocked: true
